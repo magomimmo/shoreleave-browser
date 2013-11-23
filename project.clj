@@ -5,5 +5,5 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"
             :distribution :repo
             :comments "See the notice in README.mkd or details in LICENSE_epl.html"}
-  :dependencies [[org.clojars.magomimmo/shoreleave-core "0.3.1-SNAPSHOT"]])
+  :dependencies [[org.clojars.magomimmo/shoreleave-core "0.3.1"]])
 
