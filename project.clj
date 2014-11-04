@@ -1,4 +1,4 @@
-(defproject org.clojars.magomimmo/shoreleave-browser "0.3.1"
+(defproject org.clojars.magomimmo/shoreleave-browser "0.3.2-SNAPSHOT"
   :description "A smarter client-side with ClojureScript : Shoreleave's enhanced browser utilities"
   :url "https://github.com/magomimmo/shoreleave-browser/tree/0.3.1"
   :license {:name "Eclipse Public License - v 1.0"
