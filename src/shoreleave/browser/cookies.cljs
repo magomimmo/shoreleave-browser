@@ -49,23 +49,21 @@
     ([c k]
       (-lookup c k))
     ([c k not-found]
-      (-lookup c k not-found))) 
+      (-lookup c k not-found)))
 
   ITransientCollection
   (-persistent! [c] (as-hash-map c))
   ;(-conj! [c v] nil)
 
   ITransientAssociative
-  (-assoc! [c k v & opts]
+  (-assoc! [c k v]
     (when-let [k (and (.isValidName c (name k)) (name k))]
-      (let [{:keys [max-age path domain secure?]} (apply hash-map opts)]
-        (.set c k v max-age path domain secure?))))
+        (.set c k v)))
 
   ITransientMap
-  (-dissoc! [c k & opts]
+  (-dissoc! [c k]
     (when-let [k (and (.isValidName c (name k)) (name k))]
-      (let [{:keys [path domain]} (apply hash-map opts)]
-        (.remove c k path domain))))
+        (.remove c k)))
 
   IAssociative
   (-assoc [c k v]
@@ -101,7 +99,7 @@
    (cookies-enabled? cookies))
   ([cks]
    (.isEnabled cks)))
- 
+
 (defn empty! [cks]
   (.clear cks))
- 
+
